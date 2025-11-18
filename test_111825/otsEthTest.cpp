@@ -1,4 +1,4 @@
-#include "EthernetInterface.h"
+#include "../lib/EthernetInterface.h"
 
 #include <iostream>
 #include <iomanip>
@@ -166,7 +166,7 @@ int main()
     sigaction(SIGINT, &sigIntHandler, NULL);
     
     //ethernet interface instance
-    EthernetInterface eth("192.168.46.120", "5555");
+    EthernetInterface eth("192.168.192.100", "5555");
 
     //set input DACs
     uint32_t dac_value = 0x500;
