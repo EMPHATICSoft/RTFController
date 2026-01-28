@@ -9,7 +9,7 @@
 #include <csignal>
 
 bool stopRunning = false;
-const uint32_t DAC_value = 0x0F0;
+
 void my_handler(int s)
 {
     printf("Caught signal %d\n",s);
@@ -169,24 +169,16 @@ int main()
     EthernetInterface eth("192.168.192.100", "5555");
 
     //set input DACs
-    uint32_t dac_value = 0x700; // olf is 0x500
+    uint32_t dac_value = 0x500;
     uint32_t dac_settings[] = {dac_value,dac_value,dac_value,dac_value,dac_value,dac_value,dac_value,dac_value};
     for(int i = 0; i < 8; ++i)
     {
         eth.send(2, (i << 12) | dac_settings[i]);
         //printf("%d  %x\n", i, dac_settings[i]);
-	printf("%d %d %d \n", i, (i << 12), (i << 12) | dac_settings[i]);
         eth.send(1, 0x1);
         eth.send(1, 0x2);
-	
-	printf("receive from reg 1: %d \n", eth.recieve(1));
- 
         usleep(20);
     }
-
-    printf("receive from reg 1: %d \n", eth.recieve(1));
-//    printf("receive from reg 2: %d \n", eth.recieve(2));
-
 
     const Num256bit LUT8_I1(0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa, 0xaaaaaaaa);
     const Num256bit LUT8_I2(0xcccccccc, 0xcccccccc, 0xcccccccc, 0xcccccccc, 0xcccccccc, 0xcccccccc, 0xcccccccc, 0xcccccccc);
@@ -197,12 +189,11 @@ int main()
     const Num256bit LUT8_I7(0xffffffff, 0xffffffff, 0x00000000, 0x00000000, 0xffffffff, 0xffffffff, 0x00000000, 0x00000000);
     const Num256bit LUT8_I8(0xffffffff, 0xffffffff, 0xffffffff, 0xffffffff, 0x00000000, 0x00000000, 0x00000000, 0x00000000);
 
-    Num256bit lut8_table1 = LUT8_I7;
-    Num256bit lut8_table2 = LUT8_I8;
-    Num256bit lut8_table3 = LUT8_I1;
-    Num256bit lut8_table4 = LUT8_I1;// & LUT8_I4;
+    Num256bit lut8_table1 = LUT8_I8;
+    Num256bit lut8_table2 = LUT8_I7;
+    Num256bit lut8_table3 = LUT8_I7;
+    Num256bit lut8_table4 = ~LUT8_I1 & LUT8_I4;
 
-    
     //set output 1 LUTs
     for(int i = 0; i < 8; ++i)
     {
@@ -211,14 +202,12 @@ int main()
     }
     eth.send(52, 0x20000000000 | 0xaaaaaaaa);  //output LUT, select I1
     eth.send(53, 0x0000000000000);
-
-   
     //set output 2 LUTs
     for(int i = 0; i < 8; ++i)
     {
         eth.send(56, lut8_table2[i]);
     }
-    //eth.send(56, 0x20000000000 | 0xaaaaaaaa);  //output LUT, select I1
+    eth.send(56, 0x20000000000 | 0xaaaaaaaa);  //output LUT, select I1
     eth.send(57, 0x0000);
     //set output 3 LUTs
     for(int i = 0; i < 8; ++i)
@@ -233,10 +222,9 @@ int main()
     }
     eth.send(64, 0x20000000000 | 0xaaaaaaaa);  //output LUT, select I1
     
-
     //input 1 settings
     eth.send( 4, 0x10f03); //trig 
-    eth.send( 5, 0x7); //stretch
+    eth.send( 5, 0xffffffff); //stretch
     eth.send( 6, 0x0); //delay
     //input 2 settings
     eth.send( 8, 0x10f03); //trig 
@@ -252,31 +240,22 @@ int main()
     eth.send(18, 0x0); //delay
 
     //configure pulse generator
-    //eth.send(98, 0xa0010);
-    eth.send(98, 0x50020);
+    eth.send(98, 0x50010);
 
     //configure user clocks
     eth.send(3, 0x202040810200105);
     eth.send(1, 0x4);
 
-    //0x108 has the pulse generator
-    //0x107 has 200 MHz clock
-    //0x106 has 100 MHz
-    //0x105 has 50 MHz
-    //0x104 has 25 MHz 
-    //0x100 should be the input1 cloned 
-
     // set output muxes
-    eth.send(68, 0x100); // 68 == NIM/TTL back output 1
-    eth.send(69, 0x105); // 69 == NIM/TTL back output 2
-    eth.send(70, 0x105); // 70 == NIM/TTL back output 3
-    eth.send(71, 0x105); // 71 == NIM/TTL back output 4
-
+    eth.send(68, 0x100);
+    eth.send(69, 0x100);
+    eth.send(70, 0x100);
+    eth.send(71, 0x100);
     eth.send(72, 0x100);
     eth.send(73, 0x0);
     eth.send(96, 4);
     eth.send(97, 7);
- 
+
     //print clock frequencies
     std::cout << std::hex << (eth.recieve(1)>>3) << std::endl;
     printf("USER 1: %0.3f\n", (float)eth.recieve(100)/1000000.0);
@@ -288,19 +267,18 @@ int main()
 
     //reset counters 
     eth.send(0, 0x8);
-    usleep(1000);
+    usleep(10000);
+
     //print counters 
     for(int i = 0; i < 8; ++i)
     {
         printf("Input %d count: %10ld\n", i+1, eth.recieve(7+i*4));
     }
 
-    for(int i = 0; i < 20; ++i)
+    for(int i = 0; i < 4; ++i)
     {
-        printf("Output %d, reg %d, count: %10ld\n", i+1,90+i, eth.recieve(90+i));
+        printf("Output %d count: %10ld\n", i+1, eth.recieve(54+i*4));
     }
-  
-
 
     //start DAQ thread
     DataThread dt;
@@ -309,9 +287,35 @@ int main()
     //prepare burst mode
     eth.setBurstMode(true);
 
+    //set input DACs
+
+    for(uint32_t dac_value=1600; dac_value<2000; dac_value=dac_value+50){
+      //uint32_t dac_value = 0x500;
+      eth.send(0, 0x8);
+      std::cout << "\n DAC configuration: "<<dac_value<<std::endl;
+      uint32_t dac_settings[] = {dac_value,dac_value,dac_value,dac_value,dac_value,dac_value,dac_value,dac_value};
+    for(int i = 0; i < 8; ++i)
+    {
+        eth.send(2, (i << 12) | dac_settings[i]);
+        //printf("%d  %x\n", i, dac_settings[i]);
+        eth.send(1, 0x1);
+        eth.send(1, 0x2);
+        usleep(20);
+    }
+
+    usleep(500000);
+    //print counters
+    for(int i = 0; i < 8; ++i)
+    {
+        printf("Input %d count: %10ld\n", i+1, eth.recieve(7+i*4));
+    }
+    
+    }
+
+    
     //configure TAC
     eth.send(106, 1 | (3 << 4) | (uint64_t(3000) << 32));
-    while(!stopRunning) usleep(10);
+    while(!stopRunning) usleep(10000000);
     eth.send(106, 0 | (3 << 4) | (uint64_t(3000) << 32));
     eth.setBurstMode(false);
 

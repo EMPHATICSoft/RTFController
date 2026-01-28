@@ -1,0 +1,431 @@
+7
+USER 1: 25.000
+USER 2: 50.000
+USER 3: 100.000
+USER 4: 200.000
+EXTERN: 0.000
+Sys160: 160.000
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+Output 1 count:          0
+Output 2 count:          0
+Output 3 count:          0
+Output 4 count:          0
+
+ DAC configuration: 0
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 64
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: c8
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 12c
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 190
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 1f4
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 258
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 2bc
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 320
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 384
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 3e8
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 44c
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 4b0
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 514
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 578
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 5dc
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 640
+Input 1 count:          0
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 6a4
+Input 1 count:          2
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          0
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 708
+Input 1 count:          2
+Input 2 count:          0
+Input 3 count:          0
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 76c
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 7d0
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 834
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 898
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 8fc
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 960
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: 9c4
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: a28
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: a8c
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: af0
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: b54
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: bb8
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: c1c
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: c80
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: ce4
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: d48
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: dac
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: e10
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: e74
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: ed8
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: f3c
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+
+ DAC configuration: fa0
+Input 1 count:          2
+Input 2 count:          1
+Input 3 count:          1
+Input 4 count:          1
+Input 5 count:          0
+Input 6 count:          0
+Input 7 count:          0
+Input 8 count:          0
+Caught signal 2
+Size: 0
